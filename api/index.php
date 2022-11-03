@@ -5,6 +5,17 @@
     $protocol = 'https://';
     $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; //取得目前頁面網址
     $loginUrl = $helper->getLoginUrl($url, $permissions); //取得 Facebook 登入網址
+
+
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+
+
 ?>
 
 <?php if (isset($accessToken)) : require_once dirname(__FILE__) . '/facebook_login/statuslogin.php'; ?>
@@ -74,6 +85,8 @@ window.location.href = "<?php echo $loginUrl; ?>";
     </div>
     <div class="container">
         <div class="content">
+
+            <h2>我的IP  <?php echo $ip; ?></h2>
             <h2>LINE官方帳號服務<br />個人資料蒐集告知聲明及同意</h2>
 
             <div class="privacy">
