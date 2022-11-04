@@ -1,10 +1,17 @@
 <?php
-
 session_start();
 @session_destroy();
+$_SESSION = array(); 
+$logoutUrl = 'https://www.facebook.com/logout.php?next=http://mydomain.com/logout.php&access_token=' . $helper->getAccessToken();
+
+
+
 // if ($_GET['url'] != Null) {
-//      header('location: '.$_GET['url']);
+//     header('location: '.$_GET['url']);
 // } else {
-//      header('location: /');
+//     header('location: /');
 // }
+
 ?>
+
+"<?php echo $logoutUrl; ?>
