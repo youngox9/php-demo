@@ -6,6 +6,7 @@
     $domain = 'https://php-demo-mu.vercel.app/api/';
     $url = 'https://www.facebook.com/logout.php?next=' .  $domain .
       '&access_token='.$accessToken;
-    session_destroy();
+    echo $url;
     header('Location: '.$url);
+    session_destroy();
 ?>
