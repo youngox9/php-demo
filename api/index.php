@@ -81,13 +81,15 @@ window.location.href = "<?php echo $loginUrl; ?>";
                 <p>user token: <?php echo $accessToken ?></p>
                 <a
                     href="api/logout.php?url=<?php echo $protocol; ?><?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">登出</a>
+                <a
+                    href="<?php echo 'https://www.facebook.com/logout.php?next=https://php-demo-mu.vercel.app/api&access_token=' . $accessToken ?>">登出</a>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="content">
 
-            <h2>我的IP  <?php echo $ip; ?></h2>
+            <h2>我的IP <?php echo $ip; ?></h2>
             <h2>LINE官方帳號服務<br />個人資料蒐集告知聲明及同意</h2>
 
             <div class="privacy">
