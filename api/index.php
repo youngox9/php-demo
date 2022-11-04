@@ -91,10 +91,6 @@ window.location.href = "<?php echo $loginUrl; ?>";
     </div>
     <div class="container">
         <div class="content">
-            <?php
-                $url = $helper -> getLogoutUrl($accessToken, 'https://php-demo-mu.vercel.app/api/');
-                echo $url;
-            ?>
             <h2>我的IP <?php echo $ip; ?></h2>
             <h2>LINE官方帳號服務<br />個人資料蒐集告知聲明及同意</h2>
 
