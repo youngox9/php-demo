@@ -2,9 +2,9 @@
 
 session_start();
 @session_destroy();
-if ($_GET['url'] != Null) {
-    // header('location: '.$_GET['url']);
-} else {
-    // header('location: /');
-}
+// if ($_GET['url'] != Null) {
+//      header('location: '.$_GET['url']);
+// } else {
+//      header('location: /');
+// }
 ?>
