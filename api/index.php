@@ -66,6 +66,31 @@ window.location.href = "<?php echo $loginUrl; ?>";
 
     gtag("config", "UA-118980614-2");
     </script>
+
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '308011804556246',
+            cookie: true,
+            xfbml: true,
+            version: '{api-version}'
+        });
+
+        FB.AppEvents.logPageView();
+
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
 </head>
 
 <body>
@@ -344,6 +369,12 @@ window.location.href = "<?php echo $loginUrl; ?>";
                 300
             );
     });
+
+    $('.logout').click(function() {
+        FB.logout(function() {
+            window.location = "https://php-demo-mu.vercel.app/api";
+        });
+    })
     </script>
 </body>
 
