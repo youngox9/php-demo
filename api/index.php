@@ -24,6 +24,7 @@
 window.location.href = "<?php echo $loginUrl; ?>";
 </script>
 <?php endif; ?>
+<?php echo $helper->getAccessToken() ?>
 <html>
 
 <head>
