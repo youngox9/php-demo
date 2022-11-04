@@ -4,7 +4,7 @@
     if(isset($accessToken)) {
         $url = $helper -> getLogoutUrl($accessToken, 'https://php-demo-mu.vercel.app/api/');
         echo $url;
-    }else {}
-
-
+    }else {
+        echo 'error';
+    }
 ?>
