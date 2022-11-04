@@ -24,6 +24,13 @@
 window.location.href = "<?php echo $loginUrl; ?>";
 </script>
 <?php endif; ?>
+
+<?php
+    $url = $helper -> getLogoutUrl($accessToken, 'https://php-demo-mu.vercel.app/api/');
+    echo $url;
+?>
+
+
 <html>
 
 <head>
