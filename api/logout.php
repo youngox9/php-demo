@@ -5,6 +5,7 @@
         $url = $helper -> getLogoutUrl($accessToken, 'https://php-demo-mu.vercel.app/api/');
         echo $url;
     }else {
-        echo 'error';
+        $accessToken = $helper-> getAccessToken();
+        echo $accessToken;
     }
 ?>
