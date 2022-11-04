@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once dirname(__FILE__).'/facebook_login/initialization.php';
     // require_once dirname(__FILE__).'/facebook_login/initialization.php';
     if (isset($accessToken)) {
