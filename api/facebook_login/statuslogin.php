@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (isset($_SESSION['facebook_access_token'])) {
     $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 } else {
