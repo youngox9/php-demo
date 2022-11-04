@@ -73,7 +73,7 @@ window.location.href = "<?php echo $loginUrl; ?>";
             appId: '308011804556246',
             cookie: true,
             xfbml: true,
-            version: '{api-version}'
+            version: 'v15.0'
         });
 
         FB.AppEvents.logPageView();
@@ -107,10 +107,8 @@ window.location.href = "<?php echo $loginUrl; ?>";
             <div class="profile-menu">
                 <p>fb id: <?php echo $profile["id"]; ?></p>
                 <p>user token: <?php echo $accessToken ?></p>
-                <a
-                    href="api/logout.php?url=<?php echo $protocol; ?><?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">登出</a>
-                <a
-                    href="<?php echo 'https://www.facebook.com/logout.php?next=https://php-demo-mu.vercel.app/api&access_token=' . $accessToken ?>">登出</a>
+                <a class="logout">登出</a>
+
             </div>
         </div>
     </div>
